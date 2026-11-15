@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bean & Brew Café</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <h2>Bean & Brew</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="themeBtn">
+            Toggle Light/Dark Mode
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- HOME -->
+    <section id="home">
+
+        <h1>Welcome to Bean & Brew Café</h1>
+
+        <!-- Task 8: Opening Status -->
+        <p id="status"></p>
+
+        <p>
+            Fresh coffee, delicious food, and a relaxing atmosphere.
+        </p>
+
+        <a href="#menu">View Our Menu</a>
+
+    </section>
+
+
+    <!-- CAFE IMAGE -->
+    <img
+        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=80"
+        alt="Cafe">
+
+
+    <!-- MENU -->
+    <section id="menu">
+
+        <h2>Our Popular Items</h2>
+
+
+        <!-- Task 7: Category Filter -->
+
+        <div id="filters">
+
+            <button class="filter-btn" data-category="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-category="Drinks">
+                Drinks
+            </button>
+
+            <button class="filter-btn" data-category="Pastries">
+                Pastries
+            </button>
+
+        </div>
+
+
+        <!-- Task 4: Order Calculator -->
+
+        <h3>Select Your Items</h3>
+
+        <div class="order-list">
+
+            <label>
+                <input
+                    type="checkbox"
+                    class="menu-check"
+                    data-price="450">
+
+                Cappuccino - Rs. 450
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    class="menu-check"
+                    data-price="300">
+
+                Butter Croissant - Rs. 300
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    class="menu-check"
+                    data-price="550">
+
+                Chocolate Cake - Rs. 550
+            </label>
+
+        </div>
+
+
+        <p id="total">
+            Total: Rs. 0
+        </p>
+
+
+        <!-- MENU TABLE -->
+
+        <table id="menuTable">
+
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+
+
+            <tr class="menu-row" data-category="Drinks">
+
+                <td>Cappuccino</td>
+
+                <td>Drinks</td>
+
+                <td>Rs. 450</td>
+
+            </tr>
+
+
+            <tr class="menu-row" data-category="Pastries">
+
+                <td>Butter Croissant</td>
+
+                <td>Pastries</td>
+
+                <td>Rs. 300</td>
+
+            </tr>
+
+
+            <tr class="menu-row" data-category="Pastries">
+
+                <td>Chocolate Cake</td>
+
+                <td>Pastries</td>
+
+                <td>Rs. 550</td>
+
+            </tr>
+
+
+            <tr class="menu-row" data-category="Drinks">
+
+                <td>Espresso</td>
+
+                <td>Drinks</td>
+
+                <td>Rs. 350</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Bean & Brew</h2>
+
+
+        <!-- Task 6: Read More -->
+
+        <article>
+
+            <p>
+                Bean & Brew Café is a cozy place where people can enjoy
+                fresh coffee and delicious food in a relaxing environment.
+            </p>
+
+
+            <p id="extraText" style="display: none;">
+
+                We use quality ingredients and freshly prepared products.
+                Our goal is to provide friendly service and a comfortable
+                place for students, families, and coffee lovers.
+
+            </p>
+
+
+            <button id="readMoreBtn">
+                Read More
+            </button>
+
+        </article>
+
+    </section>
+
+
+    <!-- LIST -->
+
+    <section>
+
+        <h2>Why Choose Us?</h2>
+
+        <ol type="A">
+
+            <li>Fresh coffee beans</li>
+
+            <li>Fresh pastries</li>
+
+            <li>Friendly environment</li>
+
+            <li>Locally sourced ingredients</li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- INSTAGRAM -->
+
+    <p>
+
+        Follow us on
+
+        <a href="https://www.instagram.com/">
+            Instagram
+        </a>.
+
+    </p>
+
+
+    <!-- OPENING HOURS -->
+
+    <section id="hours">
+
+        <h2>Opening Hours</h2>
+
+
+        <table>
+
+            <tr>
+
+                <th>Day</th>
+
+                <th>Opening</th>
+
+                <th>Closing</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>Monday</td>
+
+                <td>8:00 AM</td>
+
+                <td>9:00 PM</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>Tuesday</td>
+
+                <td>8:00 AM</td>
+
+                <td>9:00 PM</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>Wednesday</td>
+
+                <td>8:00 AM</td>
+
+                <td>9:00 PM</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- CONTACT / FORM -->
+
+    <section id="contact">
+
+        <h2>Reserve a Table</h2>
+
+
+        <form id="contactForm">
+
+
+            <!-- Name -->
+
+            <label for="name">
+                Your Name:
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                required>
+
+
+            <br><br>
+
+
+            <!-- Email -->
+
+            <label for="email">
+                Your Email:
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                required>
+
+
+            <br><br>
+
+
+            <!-- Task 5: Birth Year -->
+
+            <label for="birth-year">
+                Birth Year:
+            </label>
+
+            <input
+                type="text"
+                id="birth-year"
+                placeholder="e.g. 2002">
+
+
+            <br><br>
+
+
+            <!-- Date -->
+
+            <label for="date">
+                Date:
+            </label>
+
+            <input
+                type="date"
+                id="date">
+
+
+            <br><br>
+
+
+            <!-- Radio Buttons -->
+
+            <p>
+                Preferred Seating:
+            </p>
+
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="seating"
+                    value="indoor">
+
+                Indoor
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="seating"
+                    value="outdoor">
+
+                Outdoor
+
+            </label>
+
+
+            <!-- Checkboxes -->
+
+            <p>
+                Extras:
+            </p>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="cake">
+
+                Birthday Cake
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="window">
+
+                Window Seat
+
+            </label>
+
+
+            <br><br>
+
+
+            <!-- Task 9: Special Request -->
+
+            <label for="special-notes">
+                Special Request:
+            </label>
+
+
+            <textarea
+                id="special-notes"
+                maxlength="100"
+                placeholder="Write your special request...">
+            </textarea>
+
+
+            <p id="charCount">
+                100 characters remaining
+            </p>
+
+
+            <br>
+
+
+            <!-- Submit -->
+
+            <button type="submit">
+                Submit
+            </button>
+
+
+        </form>
+
+
+        <!-- Task 1 Message -->
+
+        <p id="formMessage"></p>
+
+
+        <!-- Task 5 Message -->
+
+        <p id="discountMessage"></p>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        &copy; 2026 Bean & Brew Café
+    </p>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
